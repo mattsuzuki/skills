@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<h3>Skills as of <%= time.toLocaleString() %></h3>
+<ul>
+  <% skills.forEach(function(t) { %>
+    <li>
+      <!-- query parameters come after a "?" in the url
+           They are a way to provide extra info to the server
+           Similar to route params, except they do not influence
+           how a route is matched
+      -->
+      <form action="/skills/<%= t.id %>?_method=DELETE"
+        class="delete-form"
+        method="POST"
+      >
+        <button type="submit">X</button>
+      </form>
+      <a href="/skills/<%= t.id %>"><%= t.skill %></a>
+      - 
+      <%= t.done ? 'done' : 'not done' %>
+    </li>
+  <% }); %>
+</ul>
+<a href="/skills/new">Add Skill</a>
+
+<%- include('../partials/footer') %>

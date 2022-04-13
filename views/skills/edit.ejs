@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<h3>Edit Skill #<%= skill.id %></h3>
+<form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+  <input type="text" name="skill" value="<%= skill.skill %>">
+  <p>
+    <label>
+      <input type="checkbox" name="done" <%= skill.done ? 'checked' : '' %>>
+      Completed
+    </label>
+  </p>
+  <button type="submit">Save Skill</button>
+</form>
+
+<%- include('../partials/footer') %>
