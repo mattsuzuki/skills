@@ -1,9 +1,41 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-box-sizing: border-box;
+  box-sizing: border-box;
+
+  min-height: 100vh;
 }
 
 a {
-  color: #55c231;
+  color: #000000;
+  font-size: 16px;
+}
+
+.add {
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  width: 100px;
+  text-align: center;
+  background-color: #55c231;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+nav  a{
+
+  margin-right: 20px;
+  
+}
+
+li {
+  list-style: none;
+}
+
+button a {
+  display: flex;
+  flex: auto;
 }
